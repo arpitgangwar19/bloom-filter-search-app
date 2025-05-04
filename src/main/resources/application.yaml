@@ -1,0 +1,15 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  data:
+    mongodb:
+#      uri: mongodb://localhost:27017/feeddb // for localhost
+      uri: mongodb://mongo:27017/feeddb
+  application:
+    name: feed-search-app
+server:
+  port: 8080
+  environment:
+    - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/feeddb
